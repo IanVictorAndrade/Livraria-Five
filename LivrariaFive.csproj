@@ -1,0 +1,403 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A02CE69B-C030-48FA-BE16-A10D7F51BA63}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>LivrariaFive</RootNamespace>
+    <AssemblyName>LivrariaFive</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BitMiracle.LibTiff.NET, Version=2.4.649.0, Culture=neutral, PublicKeyToken=53879b3e20e7a7d6, processorArchitecture=MSIL">
+      <HintPath>packages\BitMiracle.LibTiff.NET.2.4.649\lib\net40\BitMiracle.LibTiff.NET.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="IronSoftware.Drawing.Common, Version=2023.6.1.0, Culture=neutral, PublicKeyToken=8d7e55c97b3e9835, processorArchitecture=MSIL">
+      <HintPath>packages\IronSoftware.System.Drawing.2023.6.1\lib\netstandard2.0\IronSoftware.Drawing.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=6.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\lib\net461\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.150.1576.0\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="SixLabors.ImageSharp, Version=2.0.0.0, Culture=neutral, PublicKeyToken=d998eea7b14cab13, processorArchitecture=MSIL">
+      <HintPath>packages\SixLabors.ImageSharp.2.1.3\lib\net472\SixLabors.ImageSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="SkiaSharp, Version=2.88.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756, processorArchitecture=MSIL">
+      <HintPath>packages\SkiaSharp.2.88.3\lib\net462\SkiaSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SqlClient, Version=4.6.1.5, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Data.SqlClient.4.8.5\lib\net461\System.Data.SqlClient.dll</HintPath>
+    </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Resources.Extensions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Resources.Extensions.7.0.0\lib\net462\System.Resources.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encoding.CodePages, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encoding.CodePages.5.0.0\lib\net461\System.Text.Encoding.CodePages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Text.Json.7.0.2\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="zxing, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net47\zxing.dll</HintPath>
+    </Reference>
+    <Reference Include="zxing.presentation, Version=0.16.9.0, Culture=neutral, PublicKeyToken=4e88037ac681fe60, processorArchitecture=MSIL">
+      <HintPath>packages\ZXing.Net.0.16.9\lib\net47\zxing.presentation.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\AutorController.cs" />
+    <Compile Include="Controller\CarrinhoController.cs" />
+    <Compile Include="Controller\ClienteController.cs" />
+    <Compile Include="Controller\EditoraController.cs" />
+    <Compile Include="Controller\GeneroController.cs" />
+    <Compile Include="Controller\ItemDeCompraController.cs" />
+    <Compile Include="Controller\LivroController.cs" />
+    <Compile Include="Controller\PedidoController.cs" />
+    <Compile Include="Livraria.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Livraria.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LivrariaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LivrariaDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LivrariaDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LivrariaDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Autor.cs" />
+    <Compile Include="Model\Carrinho.cs" />
+    <Compile Include="Model\CarrinhoData.cs" />
+    <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Model\Editora.cs" />
+    <Compile Include="Model\Genero.cs" />
+    <Compile Include="Model\ItemDeCompra.cs" />
+    <Compile Include="Model\Livro.cs" />
+    <Compile Include="Model\Pedido.cs" />
+    <Compile Include="Persistence\DatabaseConnection.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ValidaCadastroUser.cs" />
+    <Compile Include="ValidaFormPagamentoCartao.cs" />
+    <Compile Include="View\DetalhesLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\DetalhesLivro.Designer.cs">
+      <DependentUpon>DetalhesLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormBoleto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormBoleto.Designer.cs">
+      <DependentUpon>FormBoleto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormCadastrarLivro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCadastrarLivro.Designer.cs">
+      <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormCarrinho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormCarrinho.Designer.cs">
+      <DependentUpon>FormCarrinho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormLoginUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormLoginUser.Designer.cs">
+      <DependentUpon>FormLoginUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormMeusPedidos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormMeusPedidos.Designer.cs">
+      <DependentUpon>FormMeusPedidos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPagamentoCartao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPagamentoCartao.Designer.cs">
+      <DependentUpon>FormPagamentoCartao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPerfilUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPerfilUsuario.Designer.cs">
+      <DependentUpon>FormPerfilUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPix.Designer.cs">
+      <DependentUpon>FormPix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormRelatorioClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRelatorioClientes.Designer.cs">
+      <DependentUpon>FormRelatorioClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormRelatorioFaturamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRelatorioFaturamento.Designer.cs">
+      <DependentUpon>FormRelatorioFaturamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormRelatorioProdutos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRelatorioProdutos.Designer.cs">
+      <DependentUpon>FormRelatorioProdutos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormRelatorioVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormRelatorioVendas.Designer.cs">
+      <DependentUpon>FormRelatorioVendas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmGerenciarLivros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmGerenciarLivros.Designer.cs">
+      <DependentUpon>FrmGerenciarLivros.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmGerenciarUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmGerenciarUsuarios.Designer.cs">
+      <DependentUpon>FrmGerenciarUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmPrincipalAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmPrincipalAdmin.Designer.cs">
+      <DependentUpon>FrmPrincipalAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FrmTelaLoginAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FrmTelaLoginAdmin.Designer.cs">
+      <DependentUpon>FrmTelaLoginAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\LivroForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\LivroForm.Designer.cs">
+      <DependentUpon>LivroForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\FormPedido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\FormPedido.Designer.cs">
+      <DependentUpon>FormPedido.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\DetalhesLivro.resx">
+      <DependentUpon>DetalhesLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormBoleto.resx">
+      <DependentUpon>FormBoleto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormCadastrarLivro.resx">
+      <DependentUpon>FormCadastrarLivro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormCarrinho.resx">
+      <DependentUpon>FormCarrinho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormLoginUser.resx">
+      <DependentUpon>FormLoginUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormMeusPedidos.resx">
+      <DependentUpon>FormMeusPedidos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPagamentoCartao.resx">
+      <DependentUpon>FormPagamentoCartao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPerfilUsuario.resx">
+      <DependentUpon>FormPerfilUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPix.resx">
+      <DependentUpon>FormPix.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRelatorioClientes.resx">
+      <DependentUpon>FormRelatorioClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRelatorioFaturamento.resx">
+      <DependentUpon>FormRelatorioFaturamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRelatorioProdutos.resx">
+      <DependentUpon>FormRelatorioProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormRelatorioVendas.resx">
+      <DependentUpon>FormRelatorioVendas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmGerenciarLivros.resx">
+      <DependentUpon>FrmGerenciarLivros.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmGerenciarUsuarios.resx">
+      <DependentUpon>FrmGerenciarUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmPrincipalAdmin.resx">
+      <DependentUpon>FrmPrincipalAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FrmTelaLoginAdmin.resx">
+      <DependentUpon>FrmTelaLoginAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\LivroForm.resx">
+      <DependentUpon>LivroForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\FormPedido.resx">
+      <DependentUpon>FormPedido.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Livraria.xsc">
+      <DependentUpon>Livraria.xsd</DependentUpon>
+    </None>
+    <None Include="Livraria.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Livraria.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Livraria.xss">
+      <DependentUpon>Livraria.xsd</DependentUpon>
+    </None>
+    <None Include="LivrariaDataSet.xsc">
+      <DependentUpon>LivrariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LivrariaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LivrariaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LivrariaDataSet.xss">
+      <DependentUpon>LivrariaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LivrariaDataSet1.xsc">
+      <DependentUpon>LivrariaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LivrariaDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LivrariaDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LivrariaDataSet1.xss">
+      <DependentUpon>LivrariaDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\SkiaSharp.NativeAssets.macOS.2.88.3\build\net462\SkiaSharp.NativeAssets.macOS.targets" Condition="Exists('packages\SkiaSharp.NativeAssets.macOS.2.88.3\build\net462\SkiaSharp.NativeAssets.macOS.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este projeto faz referência a pacotes do NuGet que não estão presentes neste computador. Use a Restauração de Pacotes do NuGet para baixá-los.  Para obter mais informações, consulte http://go.microsoft.com/fwlink/?LinkID=322105. O arquivo ausente é {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\SkiaSharp.NativeAssets.macOS.2.88.3\build\net462\SkiaSharp.NativeAssets.macOS.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\SkiaSharp.NativeAssets.macOS.2.88.3\build\net462\SkiaSharp.NativeAssets.macOS.targets'))" />
+    <Error Condition="!Exists('packages\SkiaSharp.NativeAssets.Win32.2.88.3\build\net462\SkiaSharp.NativeAssets.Win32.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\SkiaSharp.NativeAssets.Win32.2.88.3\build\net462\SkiaSharp.NativeAssets.Win32.targets'))" />
+    <Error Condition="!Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets'))" />
+  </Target>
+  <Import Project="packages\SkiaSharp.NativeAssets.Win32.2.88.3\build\net462\SkiaSharp.NativeAssets.Win32.targets" Condition="Exists('packages\SkiaSharp.NativeAssets.Win32.2.88.3\build\net462\SkiaSharp.NativeAssets.Win32.targets')" />
+  <Import Project="packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets" Condition="Exists('packages\Microsoft.Extensions.Logging.Abstractions.6.0.0\build\Microsoft.Extensions.Logging.Abstractions.targets')" />
+</Project>
